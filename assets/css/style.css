@@ -10,33 +10,37 @@ body {
     max-width: 100%;
 }
 
-h1 {
-    font-family: 'Galindo', cursive;
-    color: rgb(29, 97, 175);
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: black;
-}
-
 input[type="radio"] {
     margin-top: -6px;
     vertical-align: middle;
   }
 
-.btn-outline-success {
-    background: white;
+.btn {
     opacity: 1;
     left: 0;
     position: relative;
+    font-weight: bold;
 }
 
-.btn-outline-success:focus {
-    -webkit-box-shadow: none!important;
-    box-shadow: none!important;
-}
-
-.container {
+.container-fluid {
     min-height: 100vh;
     background-image: url('../images/background2.png');
+    width: 75%;
+    max-width: 1200px;
+    min-width: 400px;
+}
+
+.card {
+    display: none;
+    opacity: 0;
+}
+
+#thinking-gif{
+    border-radius: 10px;
+    border: 2px #cccccc solid;
+    width: 80%;
+    margin-top: 41px;
+    display: initial;
 }
 
 #timer-div {
@@ -44,9 +48,24 @@ input[type="radio"] {
 }
 
 #timer {
+    font-family: 'Galindo', cursive;
     position: relative;
     right: 40%;
     opacity: 0;
     font-size: 28px;
     color: rgb(233, 36, 36);
+    -webkit-text-stroke: .5px black;
+}
+
+#finish-button {
+    margin-top: 16px;
+    position: relative;
+    opacity: 0;
+}
+
+#header {
+    font-family: 'Galindo', cursive;
+    color: #007bff;
+    font-size: 48px;
+    -webkit-text-stroke: 1px black;
 }
