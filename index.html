@@ -9,19 +9,22 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Galindo" rel="stylesheet">
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="./assets/javascript/app.js"></script>
+    <title>Trivia Game</title>
 </head>
 
 <body>
-    <div class="container text-center">
+    <div class="container text-center pb-2">
         <div class="row">
-            <div class="col mt-4">
+            <div class="col mt-2">
                 <h1>Trivia Game!</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <button type="button" class="btn btn-outline-danger">Click to Begin</button>
+            <div class="col d-flex" id="timer-div">
+                <button type="button" class="btn btn-outline-success m-auto" id="start-button">Click to Start</button>
             </div>
         </div>
         <div class="row card mx-auto m-3">
@@ -34,19 +37,19 @@
             </div>
             <div class="row text-left text-md-center mb-2">
                 <div class="col-12 col-md align-self-center ml-3 m-md-0">
-                    <input type="radio" name="answer2" /> Red
+                    <input type="radio" name="answer1" /> Red
                 </div>
                 <div class="col-12 col-md align-self-center ml-3 m-md-0">
-                    <input type="radio" name="answer2" /> Blue
+                    <input type="radio" name="answer1" /> Blue
                 </div>
                 <div class="col-12 col-md align-self-center ml-3 m-md-0">
-                    <input type="radio" name="answer2" /> Black
+                    <input type="radio" name="answer1" /> Black
                 </div>
                 <div class="col-12 col-md align-self-center ml-3 m-md-0">
-                    <input type="radio" name="answer2" /> Yellow
+                    <input type="radio" name="answer1" /> Yellow
                 </div>
                 <div class="col-12 col-md align-self-center ml-3 m-md-0">
-                    <input type="radio" name="answer2" /> Pink
+                    <input type="radio" name="answer1" /> Pink
                 </div>
             </div>
         </div>
@@ -54,22 +57,94 @@
             <div class="row">
                 <div class="col-12 card-title mt-3">
                     <h5>
-                        <strong>2. In the Witcher books and video games Geralt belongs to which witcher school?</strong>
+                        <strong>2. In the Witcher books and video games, Geralt belongs to which school of the witchers?</strong>
                     </h5>
                 </div>
             </div>
             <div class="row text-left text-md-center mb-2">
                 <div class="col-12 col-md align-self-center ml-3 m-md-0">
-                    <input type="radio" name="answer1" /> School of the Bear
+                    <input type="radio" name="answer2" /> Bear
                 </div>
                 <div class="col-12 col-md align-self-center ml-3 m-md-0">
-                    <input type="radio" name="answer1" /> School of the Cat
+                    <input type="radio" name="answer2" /> Cat
                 </div>
                 <div class="col-12 col-md align-self-center ml-3 m-md-0">
-                    <input type="radio" name="answer1" /> School of the Wolf
+                    <input type="radio" name="answer2" /> Wolf
                 </div>
                 <div class="col-12 col-md align-self-center ml-3 m-md-0">
-                    <input type="radio" name="answer1" /> School of the Viper
+                    <input type="radio" name="answer2" /> Viper
+                </div>
+            </div>
+        </div>
+        <div class="row card mx-auto m-3">
+            <div class="row">
+                <div class="col-12 card-title mt-3">
+                    <h5>
+                        <strong>3. What is Master Chief's name from the Halo video games?</strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="row text-left text-md-center mb-2">
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer3" /> John
+                </div>
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer3" /> Henry
+                </div>
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer3" /> Alan
+                </div>
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer3" /> Eric
+                </div>
+            </div>
+        </div>
+        <div class="row card mx-auto m-3">
+            <div class="row">
+                <div class="col-12 card-title mt-3">
+                    <h5>
+                        <strong>4. What has roots as nobody sees,
+                            <br> Is taller than trees,
+                            <br> Up, up it goes,
+                            <br> And yet never grows?</strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="row text-left text-md-center mb-2">
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer4" /> Mountain
+                </div>
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer4" /> Tower
+                </div>
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer4" /> Street Lamp
+                </div>
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer4" /> Geneology
+                </div>
+            </div>
+        </div>
+        <div class="row card mx-auto mt-3">
+            <div class="row">
+                <div class="col-12 card-title mt-3">
+                    <h5>
+                        <strong>5. Dante's Hell is divided into how many circles?</strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="row text-left text-md-center mb-2">
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer5" /> 6
+                </div>
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer5" /> 7
+                </div>
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer5" /> 8
+                </div>
+                <div class="col-12 col-md align-self-center ml-3 m-md-0">
+                    <input type="radio" name="answer5" /> 9
                 </div>
             </div>
         </div>
